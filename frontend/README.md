@@ -1,16 +1,39 @@
-# React + Vite
+# Euro Toddlers International Pre School
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing website for Euro Toddlers, built with React, Vite, Tailwind CSS, React Router and Framer Motion.
 
-Currently, two official plugins are available:
+## Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## React Compiler
+| Script | Description |
+|---|---|
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build into `dist/` |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project structure
 
-## Expanding the ESLint configuration
+```
+src/
+  assets/              Images and static assets
+  components/
+    layout/            Navbar, Footer (shared on every page)
+    sections/
+      home/            Homepage sections
+      about/           About page sections
+      contact/         Contact page sections
+  layouts/             Page layout wrappers (PublicLayout)
+  pages/               One component per route
+  routes/              Route definitions (AppRoutes)
+  App.jsx              App root
+  main.jsx             Entry point (mounts BrowserRouter)
+  index.css            Tailwind import and global styles
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Conventions: lowercase folder names, PascalCase component files. Sections used by one page go in `components/sections/<page>/`. Components reused across pages go in `components/` (e.g. `components/common/`).
