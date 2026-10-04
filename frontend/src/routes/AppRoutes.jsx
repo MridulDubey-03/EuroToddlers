@@ -16,6 +16,7 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/programs" element={<Programs />} />
+      <Route path="/programs/:slug" element={<ProgramDetail />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/admissions" element={<Admissions />} />
       <Route path="/contact" element={<Contact />} />

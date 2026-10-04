@@ -3,13 +3,13 @@ import SectionHeader from "../../common/SectionHeader";
 import ProgramCard from "../../common/ProgramCard";
 import { programs } from "../../../data/programs";
 
-const Programs = () => {
+const ProgramList = () => {
   return (
     <Section bg="bg-slate-50">
       <SectionHeader
-        badge="Our Programs"
-        title="Learning Designed For Every Stage"
-        description="Our curriculum is carefully designed to help every child learn, explore and grow with confidence."
+        badge="Choose A Program"
+        title="Find The Right Fit For Your Child"
+        description="Tap a program to see its curriculum, daily timing, fee structure and download the syllabus."
       />
 
       <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -21,4 +21,4 @@ const Programs = () => {
   );
 };
 
-export default Programs;
+export default ProgramList;
