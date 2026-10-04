@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "../Pages/Home";
-import About from "../Pages/About";
+import Home from "../pages/Home";
+import About from "../pages/About";
 import Programs from "../pages/Programs";
-import Gallery from "../Pages/Gallery";
+import ProgramDetail from "../pages/ProgramDetail";
+import Gallery from "../pages/Gallery";
 import Admissions from "../pages/Admissions";
 import Contact from "../pages/Contact";
 import Events from "../pages/Events";
