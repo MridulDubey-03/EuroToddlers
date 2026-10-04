@@ -16,7 +16,7 @@ const GalleryPreview = () => {
       />
 
       <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {galleryImages.map((item, index) => (
+        {galleryImages.slice(0, 6).map((item, index) => (
           <motion.div
             key={item.title}
             {...staggerReveal(index)}

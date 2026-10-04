@@ -173,32 +173,19 @@ export const facilities = [
   },
 ];
 
-export const galleryImages = [
-  {
-    title: "Creative Learning",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900",
-  },
-  {
-    title: "Fun Activities",
-    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=900",
-  },
-  {
-    title: "Classroom Moments",
-    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=900",
-  },
-  {
-    title: "Art & Craft",
-    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=900",
-  },
-  {
-    title: "Outdoor Play",
-    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900",
-  },
-  {
-    title: "Happy Kids",
-    image: "https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=900",
-  },
-];
+const galleryImageModules = import.meta.glob(
+  "../assets/images/WhatsApp Image*.jpeg",
+  { eager: true, import: "default" },
+);
+
+export const galleryImages = Object.entries(galleryImageModules)
+  .sort(([leftPath], [rightPath]) =>
+    leftPath.localeCompare(rightPath, undefined, { numeric: true }),
+  )
+  .map(([, image], index) => ({
+    title: `School Celebration ${index + 1}`,
+    image,
+  }));
 
 export const testimonials = [
   {
