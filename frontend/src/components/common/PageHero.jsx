@@ -5,7 +5,8 @@ import { FaHome, FaArrowRight } from "react-icons/fa";
 import Badge from "./Badge";
 
 // Hero banner for inner pages (About, Programs, Contact, ...)
-const PageHero = ({ badge, title, highlight, description, breadcrumb, image }) => {
+// `parent` ({ label, to }) adds a middle breadcrumb level: Home › Programs › Nursery
+const PageHero = ({ badge, title, highlight, description, breadcrumb, parent, image }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-red-50">
       {/* Decorative Circles */}
@@ -37,7 +38,7 @@ const PageHero = ({ badge, title, highlight, description, breadcrumb, image }) =
 
             {/* Breadcrumb */}
             {breadcrumb && (
-              <div className="mt-10 flex items-center gap-3 text-sm">
+              <div className="mt-10 flex flex-wrap items-center gap-3 text-sm">
                 <Link
                   to="/"
                   className="flex items-center gap-2 text-red-500 hover:text-red-600"
@@ -46,6 +47,14 @@ const PageHero = ({ badge, title, highlight, description, breadcrumb, image }) =
                   Home
                 </Link>
                 <FaArrowRight className="text-slate-400" />
+                {parent && (
+                  <>
+                    <Link to={parent.to} className="text-red-500 hover:text-red-600">
+                      {parent.label}
+                    </Link>
+                    <FaArrowRight className="text-slate-400" />
+                  </>
+                )}
                 <span className="font-semibold text-slate-700">{breadcrumb}</span>
               </div>
             )}

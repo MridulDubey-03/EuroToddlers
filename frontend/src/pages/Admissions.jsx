@@ -1,12 +1,23 @@
 import PublicLayout from "../layouts/PublicLayout";
 
+import AdmissionsHero from "../components/sections/admissions/AdmissionsHero";
+import AdmissionProcess from "../components/sections/admissions/AdmissionProcess";
+import Eligibility from "../components/sections/admissions/Eligibility";
+import DocumentsRequired from "../components/sections/admissions/DocumentsRequired";
+import AdmissionForm from "../components/sections/admissions/AdmissionForm";
+import AdmissionFAQ from "../components/sections/admissions/AdmissionFAQ";
+import AdmissionCTA from "../components/sections/admissions/AdmissionCTA";
+
 const Admissions = () => {
   return (
     <PublicLayout>
-      <section className="mx-auto max-w-7xl px-6 py-24 text-center">
-        <h1 className="text-4xl font-extrabold text-slate-800">Admissions</h1>
-        <p className="mt-4 text-slate-600">Coming soon.</p>
-      </section>
+      <AdmissionsHero />
+      <AdmissionProcess />
+      <Eligibility />
+      <DocumentsRequired />
+      <AdmissionForm />
+      <AdmissionFAQ />
+      <AdmissionCTA />
     </PublicLayout>
   );
 };

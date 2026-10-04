@@ -67,7 +67,8 @@ export default function Navbar() {
 
         {/* Admission Button */}
 
-        <button
+        <NavLink
+          to="/admissions"
           className="
           hidden
           lg:block
@@ -84,7 +85,7 @@ export default function Navbar() {
           "
         >
           Admission Open
-        </button>
+        </NavLink>
 
         {/* Mobile */}
 

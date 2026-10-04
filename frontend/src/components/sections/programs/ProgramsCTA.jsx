@@ -3,20 +3,20 @@ import { FaArrowRight } from "react-icons/fa";
 import CTABanner from "../../common/CTABanner";
 import Button from "../../common/Button";
 
-const AboutCTA = () => {
+const ProgramsCTA = () => {
   return (
     <CTABanner
-      title="Give Your Child The Best Start"
-      description="Admissions are open for 2026–27. Visit our campus, meet our teachers and see why families trust Euro Toddlers."
+      title="Not Sure Which Program Is Right?"
+      description="Tell us your child's age and we will help you choose. You are also welcome to visit our campus and meet our teachers."
     >
       <Button to="/admissions" variant="light" size="lg" icon={FaArrowRight}>
-        Apply For Admission
+        Apply Now
       </Button>
       <Button to="/contact" variant="outline-light" size="lg">
-        Contact Us
+        Talk To Us
       </Button>
     </CTABanner>
   );
 };
 
-export default AboutCTA;
+export default ProgramsCTA;

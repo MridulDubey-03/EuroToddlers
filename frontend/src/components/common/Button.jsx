@@ -13,17 +13,25 @@ const sizes = {
   lg: "px-8 py-4",
 };
 
-// Pill button. Renders a router Link when `to` is given.
+// Pill button. Renders a router Link when `to` is given,
+// an external link when `href` is given, otherwise a <button>.
+// `disabled` always renders an inactive <button>.
 const Button = ({
   to,
+  href,
   variant = "primary",
   size = "md",
   icon: Icon,
+  disabled = false,
   className = "",
   children,
   ...props
 }) => {
-  const classes = `inline-flex items-center gap-2 rounded-full font-semibold transition-all duration-300 ${variants[variant]} ${sizes[size]} ${className}`;
+  const variantClasses = disabled
+    ? `${variants[variant].replace(/hover:\S+/g, "")} cursor-not-allowed opacity-50`
+    : variants[variant];
+
+  const classes = `inline-flex items-center gap-2 rounded-full font-semibold transition-all duration-300 ${variantClasses} ${sizes[size]} ${className}`;
 
   const content = (
     <>
@@ -32,11 +40,28 @@ const Button = ({
     </>
   );
 
+  if (disabled) {
+    return (
+      <button type="button" disabled className={classes}>
+        {content}
+      </button>
+    );
+  }
+
   if (to) {
     return (
       <Link to={to} className={classes}>
         {content}
       </Link>
+    );
+  }
+
+  // External link or file download, opened in a new tab
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classes} {...props}>
+        {content}
+      </a>
     );
   }
 

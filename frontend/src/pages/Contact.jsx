@@ -1,12 +1,17 @@
 import PublicLayout from "../layouts/PublicLayout";
 
+import ContactHero from "../components/sections/contact/ContactHero";
+import ContactInfo from "../components/sections/contact/ContactInfo";
+import Maps from "../components/sections/contact/Maps";
+import FAQ from "../components/sections/contact/FAQ";
+
 const Contact = () => {
   return (
     <PublicLayout>
-      <section className="mx-auto max-w-7xl px-6 py-24 text-center">
-        <h1 className="text-4xl font-extrabold text-slate-800">Contact</h1>
-        <p className="mt-4 text-slate-600">Coming soon.</p>
-      </section>
+      <ContactHero />
+      <ContactInfo />
+      <Maps />
+      <FAQ />
     </PublicLayout>
   );
 };

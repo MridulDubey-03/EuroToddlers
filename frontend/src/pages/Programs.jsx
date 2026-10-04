@@ -1,12 +1,17 @@
 import PublicLayout from "../layouts/PublicLayout";
 
+import ProgramsHero from "../components/sections/programs/ProgramsHero";
+import ProgramList from "../components/sections/programs/ProgramList";
+import LearningMethodology from "../components/sections/home/LearningMethodology";
+import ProgramsCTA from "../components/sections/programs/ProgramsCTA";
+
 const Programs = () => {
   return (
     <PublicLayout>
-      <section className="mx-auto max-w-7xl px-6 py-24 text-center">
-        <h1 className="text-4xl font-extrabold text-slate-800">Programs</h1>
-        <p className="mt-4 text-slate-600">Coming soon.</p>
-      </section>
+      <ProgramsHero />
+      <ProgramList />
+      <LearningMethodology />
+      <ProgramsCTA />
     </PublicLayout>
   );
 };

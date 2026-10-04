@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Programs from "../pages/Programs";
+import ProgramDetail from "../pages/ProgramDetail";
 import Gallery from "../pages/Gallery";
 import Resources from "../pages/Resources";
 import Admissions from "../pages/Admissions";
@@ -17,6 +18,7 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/programs" element={<Programs />} />
+      <Route path="/programs/:slug" element={<ProgramDetail />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/admissions" element={<Admissions />} />

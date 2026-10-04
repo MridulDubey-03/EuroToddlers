@@ -5,10 +5,6 @@ import {
   FaHeart,
   FaUserFriends,
   FaChalkboardTeacher,
-  FaBaby,
-  FaChild,
-  FaBookReader,
-  FaUserGraduate,
   FaPuzzlePiece,
   FaPaintBrush,
   FaMusic,
@@ -62,41 +58,6 @@ export const features = [
     description:
       "Developing creativity, confidence, communication and leadership.",
     color: "bg-purple-50 text-purple-500",
-  },
-];
-
-export const programs = [
-  {
-    icon: FaBaby,
-    title: "Play Group",
-    age: "2 - 3 Years",
-    description:
-      "A playful environment that encourages curiosity, creativity and early social development.",
-    color: "bg-pink-100 text-pink-500",
-  },
-  {
-    icon: FaChild,
-    title: "Nursery",
-    age: "3 - 4 Years",
-    description:
-      "Building communication skills, confidence and learning through fun activities.",
-    color: "bg-yellow-100 text-yellow-500",
-  },
-  {
-    icon: FaBookReader,
-    title: "Junior KG",
-    age: "4 - 5 Years",
-    description:
-      "Developing literacy, numeracy and creative thinking through engaging lessons.",
-    color: "bg-green-100 text-green-500",
-  },
-  {
-    icon: FaUserGraduate,
-    title: "Senior KG",
-    age: "5 - 6 Years",
-    description:
-      "Preparing children for primary school with confidence, independence and leadership.",
-    color: "bg-blue-100 text-blue-500",
   },
 ];
 
